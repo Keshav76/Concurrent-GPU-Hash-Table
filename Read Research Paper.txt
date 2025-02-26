@@ -1,0 +1,16 @@
+Read Research Paper
+ -> Concurrent Data Structures
+ -> In CPU / GPU
+ -> Hashing (Various Hash Functions)
+ -> Hash Tables in C++/C
+ -> Possible concurrency bugs when implementing a data structure in parallel environment
+Graphs To plot
+ -> Time vs No of Accesses
+ -> Different Hashing Types
+ -> Horizontal vs Vertical
+Programming Language : CUDA
+Team Split: (4 main operations) 2-2
+ -> Create
+ -> Read
+ -> Update
+ -> Delete
