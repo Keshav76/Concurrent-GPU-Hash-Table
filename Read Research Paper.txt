@@ -14,3 +14,28 @@ Team Split: (4 main operations) 2-2
  -> Read
  -> Update
  -> Delete
+
+
+
+
+Roadmap:
+
+1. CRUD Operations
+2. Different Hashing Techniques (Cuckoo, etc)
+3. Different CUDA implementations (Thrust, etc)
+
+1. Different Test cases
+2. Further corrections if needed
+3. Have a baseline model
+
+1. Improvements in performance and efficiency
+2. Graphs: No of insertion/deletion per time -> Throughput -> Load Factor -> Latency Analysis -> 
+3. Try some
+
+
+
+
+Tools for Benchmarking:
+1. CUDA Profiler (Nsight Compute / Nsight Systems)
+2. Thrust library for parallel operations
+3. Custom kernels with CUDA Events for timing 
