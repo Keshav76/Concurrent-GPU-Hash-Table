@@ -4,10 +4,12 @@ Read Research Paper
  -> Hashing (Various Hash Functions)
  -> Hash Tables in C++/C
  -> Possible concurrency bugs when implementing a data structure in parallel environment
+
 Graphs To plot
  -> Time vs No of Accesses
  -> Different Hashing Types
  -> Horizontal vs Vertical
+
 Programming Language : CUDA
 Team Split: (4 main operations) 2-2
  -> Create
@@ -21,18 +23,17 @@ Team Split: (4 main operations) 2-2
 Roadmap:
 
 1. CRUD Operations
-2. Different Hashing Techniques (Cuckoo, etc)
-3. Different CUDA implementations (Thrust, etc)
-
-1. Different Test cases
-2. Further corrections if needed
-3. Have a baseline model
-
-1. Improvements in performance and efficiency
-2. Graphs: No of insertion/deletion per time -> Throughput -> Load Factor -> Latency Analysis -> 
-3. Try some
+2. Have a baseline model (+ Some test cases)
+3. Further corrections if needed
+4. Different Test cases
+5. Improvements in performance and efficiency
+  1. Different Hashing Techniques (Cuckoo, etc)
+  2. Different CUDA implementations (Thrust, etc)
+  3. Graphs: No of insertion/deletion per time -> Throughput -> Load Factor -> Latency Analysis
 
 
+2nd Review: 1, 2, 4
+3rd Review: 3, 5, 4
 
 
 Tools for Benchmarking:
