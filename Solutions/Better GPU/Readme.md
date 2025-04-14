@@ -1,0 +1,1 @@
+nvcc -ccbin /usr/bin/gcc-10 -std=c++17 exp.cu -o output -lcudart -lstdc++ -arch=sm_60 --expt-relaxed-constexpr -lm -w

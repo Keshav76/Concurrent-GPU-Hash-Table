@@ -1,0 +1,1 @@
+nvcc -ccbin /usr/bin/gcc-10 -std=c++14 concurrent_map.cu -o output -lcudart -lstdc++

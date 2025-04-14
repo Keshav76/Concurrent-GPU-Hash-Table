@@ -1,0 +1,35 @@
+Run 1:
+Creation Time: 295.870 ms
+Insertion Time: 126.943 ms (787.754 M elements/s)
+Search Time: 19.418 ms (1544.947 M elements/s)
+Deletion Time: 7.535 ms (1327.195 M elements/s)
+Load factor: 0.06
+
+Run 2:
+Creation Time: 275.738 ms
+Insertion Time: 69.534 ms (1438.136 M elements/s)
+Search Time: 19.787 ms (1516.176 M elements/s)
+Deletion Time: 6.674 ms (1498.442 M elements/s)
+Load factor: 0.06
+
+Run 3:
+Creation Time: 263.519 ms
+Insertion Time: 129.090 ms (774.654 M elements/s)
+Search Time: 11.132 ms (2694.941 M elements/s)
+Deletion Time: 3.442 ms (2905.193 M elements/s)
+Load factor: 0.06
+
+Run 4:
+Creation Time: 265.846 ms
+Insertion Time: 69.418 ms (1440.552 M elements/s)
+Search Time: 19.945 ms (1504.135 M elements/s)
+Deletion Time: 6.436 ms (1553.691 M elements/s)
+Load factor: 0.06
+
+Run 5:
+Creation Time: 311.534 ms
+Insertion Time: 69.733 ms (1434.049 M elements/s)
+Search Time: 20.099 ms (1492.632 M elements/s)
+Deletion Time: 7.663 ms (1304.998 M elements/s)
+Load factor: 0.06
+

@@ -1,0 +1,211 @@
+==PROF== Connected to process 3598241 (/users/mtech/bkeshav24/ACP/Solutions/SlabHash/output)
+==PROF== Profiling "build_table_kernel" - 1: 0%....50%....100% - 8 passes
+==PROF== Profiling "search_table" - 2: 0%....50%....100% - 8 passes
+==PROF== Profiling "delete_table_keys" - 3: 0%....50%....100% - 8 passes
+==PROF== Profiling "bucket_count_kernel" - 4: 0%....50%....100% - 8 passes
+Initializing GPU Hash Table with 1000000 keys and 2000000 buckets
+Creation Time: 327.289 ms
+Starting insertion of 1000000 elements...
+Insertion Time: 2840.255 ms (0.352 M elements/s)
+Starting search of 400000 elements...
+Search Time: 1855.819 ms (0.216 M elements/s)
+Starting deletion of 100000 elements...
+Deletion Time: 1859.026 ms (0.054 M elements/s)
+Load factor: 0.03
+Program completed successfully!
+==PROF== Disconnected from process 3598241
+[3598241] output@127.0.0.1
+  void build_table_kernel<unsigned int, unsigned int>(T1 *, T2 *, unsigned int, GpuSlabHashContext<T1, T2, (SlabHashTypeT)0>), 2025-Apr-14 14:28:02, Context 1, Stream 7
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           7.24
+    SM Frequency                                                             cycle/nsecond                           1.30
+    Elapsed Cycles                                                                   cycle                        655,238
+    Memory [%]                                                                           %                          67.10
+    DRAM Throughput                                                                      %                          67.10
+    Duration                                                                       usecond                         502.69
+    L1/TEX Cache Throughput                                                              %                          11.60
+    L2 Cache Throughput                                                                  %                          18.17
+    SM Active Cycles                                                                 cycle                     642,047.89
+    Compute (SM) [%]                                                                     %                          25.98
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   Memory is more heavily utilized than Compute: Look at the Memory Workload Analysis report section to see      
+          where the memory system bottleneck is. Check memory replay (coalescing) metrics to make sure you're           
+          efficiently utilizing the bytes transferred. Also consider whether it is possible to do more work per memory  
+          access (kernel fusion) or whether there are values you can (re)compute.                                       
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                       7,813
+    Registers Per Thread                                                   register/thread                             28
+    Shared Memory Configuration Size                                                 Kbyte                          16.38
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                      1,000,064
+    Waves Per SM                                                                                                     7.75
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             16
+    Block Limit Registers                                                            block                             16
+    Block Limit Shared Mem                                                           block                            100
+    Block Limit Warps                                                                block                             12
+    Theoretical Active Warps per SM                                                   warp                             48
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          84.77
+    Achieved Active Warps Per SM                                                      warp                          40.69
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (84.8%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel.                                                                  
+
+  void search_table<unsigned int, unsigned int>(T1 *, T2 *, unsigned int, GpuSlabHashContext<T1, T2, (SlabHashTypeT)0>), 2025-Apr-14 14:28:04, Context 1, Stream 7
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           7.21
+    SM Frequency                                                             cycle/nsecond                           1.29
+    Elapsed Cycles                                                                   cycle                        157,770
+    Memory [%]                                                                           %                          81.71
+    DRAM Throughput                                                                      %                          81.71
+    Duration                                                                       usecond                         121.92
+    L1/TEX Cache Throughput                                                              %                          26.74
+    L2 Cache Throughput                                                                  %                          23.78
+    SM Active Cycles                                                                 cycle                     145,803.52
+    Compute (SM) [%]                                                                     %                          34.15
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    INF   The kernel is utilizing greater than 80.0% of the available compute or memory performance of the device. To   
+          further improve performance, work will likely need to be shifted from the most utilized to another unit.      
+          Start by analyzing workloads in the Memory Workload Analysis section.                                         
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                       3,125
+    Registers Per Thread                                                   register/thread                             19
+    Shared Memory Configuration Size                                                 Kbyte                          16.38
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                        400,000
+    Waves Per SM                                                                                                     3.10
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             16
+    Block Limit Registers                                                            block                             21
+    Block Limit Shared Mem                                                           block                            100
+    Block Limit Warps                                                                block                             12
+    Theoretical Active Warps per SM                                                   warp                             48
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          89.02
+    Achieved Active Warps Per SM                                                      warp                          42.73
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (89.0%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel.                                                                  
+
+  void delete_table_keys<unsigned int, unsigned int>(T1 *, unsigned int, GpuSlabHashContext<T1, T2, (SlabHashTypeT)0>), 2025-Apr-14 14:28:06, Context 1, Stream 7
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           6.96
+    SM Frequency                                                             cycle/nsecond                           1.23
+    Elapsed Cycles                                                                   cycle                         43,392
+    Memory [%]                                                                           %                          79.77
+    DRAM Throughput                                                                      %                          79.77
+    Duration                                                                       usecond                          35.04
+    L1/TEX Cache Throughput                                                              %                          23.60
+    L2 Cache Throughput                                                                  %                          21.00
+    SM Active Cycles                                                                 cycle                      40,984.79
+    Compute (SM) [%]                                                                     %                          24.21
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   Memory is more heavily utilized than Compute: Look at the Memory Workload Analysis report section to see      
+          where the memory system bottleneck is. Check memory replay (coalescing) metrics to make sure you're           
+          efficiently utilizing the bytes transferred. Also consider whether it is possible to do more work per memory  
+          access (kernel fusion) or whether there are values you can (re)compute.                                       
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                         782
+    Registers Per Thread                                                   register/thread                             17
+    Shared Memory Configuration Size                                                 Kbyte                          16.38
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                        100,096
+    Waves Per SM                                                                                                     0.78
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             16
+    Block Limit Registers                                                            block                             21
+    Block Limit Shared Mem                                                           block                            100
+    Block Limit Warps                                                                block                             12
+    Theoretical Active Warps per SM                                                   warp                             48
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          71.56
+    Achieved Active Warps Per SM                                                      warp                          34.35
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (71.6%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel.                                                                  
+
+  void bucket_count_kernel<unsigned int, unsigned int>(GpuSlabHashContext<T1, T2, (SlabHashTypeT)0>, unsigned int *, unsigned int *, unsigned int), 2025-Apr-14 14:28:08, Context 1, Stream 7
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           7.20
+    SM Frequency                                                             cycle/nsecond                           1.29
+    Elapsed Cycles                                                                   cycle                        615,025
+    Memory [%]                                                                           %                          89.96
+    DRAM Throughput                                                                      %                          89.96
+    Duration                                                                       usecond                         474.66
+    L1/TEX Cache Throughput                                                              %                          38.88
+    L2 Cache Throughput                                                                  %                          36.55
+    SM Active Cycles                                                                 cycle                     612,416.40
+    Compute (SM) [%]                                                                     %                          38.76
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    INF   The kernel is utilizing greater than 80.0% of the available compute or memory performance of the device. To   
+          further improve performance, work will likely need to be shifted from the most utilized to another unit.      
+          Start by analyzing workloads in the Memory Workload Analysis section.                                         
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                     500,000
+    Registers Per Thread                                                   register/thread                             16
+    Shared Memory Configuration Size                                                 Kbyte                          16.38
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                     64,000,000
+    Waves Per SM                                                                                                   496.03
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             16
+    Block Limit Registers                                                            block                             32
+    Block Limit Shared Mem                                                           block                            100
+    Block Limit Warps                                                                block                             12
+    Theoretical Active Warps per SM                                                   warp                             48
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          71.32
+    Achieved Active Warps Per SM                                                      warp                          34.24
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (71.3%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel.                                                                  
+
