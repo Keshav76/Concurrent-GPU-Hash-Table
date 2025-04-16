@@ -1,4 +1,4 @@
-DyCuckoo 3e8
+DyCuckoo 8e8
 Slabhash 1e8
 
 
