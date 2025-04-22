@@ -1,0 +1,40 @@
+Running iteration 1...
+------------------------Warpcore------------------------
+Total elements: 50000000
+Insert Time = 23.9806 ms | Throughput = 2085.02 M ops/sec
+Search Time = 24.0291 ms | Throughput = 2080.81 M ops/sec
+Delete Time = 23.167 ms | Throughput = 2158.24 M ops/sec
+Iteration 1 completed.
+-----------------------------
+Running iteration 2...
+------------------------Warpcore------------------------
+Total elements: 50000000
+Insert Time = 23.9773 ms | Throughput = 2085.31 M ops/sec
+Search Time = 24.0343 ms | Throughput = 2080.36 M ops/sec
+Delete Time = 23.2068 ms | Throughput = 2154.54 M ops/sec
+Iteration 2 completed.
+-----------------------------
+Running iteration 3...
+------------------------Warpcore------------------------
+Total elements: 50000000
+Insert Time = 24.39 ms | Throughput = 2050.02 M ops/sec
+Search Time = 24.3569 ms | Throughput = 2052.81 M ops/sec
+Delete Time = 23.3098 ms | Throughput = 2145.02 M ops/sec
+Iteration 3 completed.
+-----------------------------
+Running iteration 4...
+------------------------Warpcore------------------------
+Total elements: 50000000
+Insert Time = 24.0558 ms | Throughput = 2078.5 M ops/sec
+Search Time = 25.0491 ms | Throughput = 1996.08 M ops/sec
+Delete Time = 23.6073 ms | Throughput = 2117.99 M ops/sec
+Iteration 4 completed.
+-----------------------------
+Running iteration 5...
+------------------------Warpcore------------------------
+Total elements: 50000000
+Insert Time = 28.1787 ms | Throughput = 1774.39 M ops/sec
+Search Time = 27.9716 ms | Throughput = 1787.53 M ops/sec
+Delete Time = 27.0638 ms | Throughput = 1847.48 M ops/sec
+Iteration 5 completed.
+-----------------------------

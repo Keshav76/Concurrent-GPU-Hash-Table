@@ -4,14 +4,10 @@
 #include "../tools/gputimer.h"
 #include "../data/data_layout.cuh"
 #include "../core/dynamic_cuckoo.cuh"
-#include <chrono>
 namespace ch = cuckoo_helpers;
 using namespace std;
-using std::chrono::duration_cast;
-using HR = std::chrono::high_resolution_clock;
-using HRTimer = HR::time_point;
-using std::chrono::microseconds;
-using std::chrono::milliseconds;
+
+
 class DynamicTest {
 public:
     using key_t = DataLayout<>::key_t;
@@ -28,6 +24,21 @@ public:
     key_t *delete_keys_pool_d;   // For delete keys
     value_t *value_pool_d, *check_pool_d;
     double init_fill_factor = 0.85;
+    float startTimer(cudaEvent_t &start, cudaEvent_t &stop){
+        cudaEventCreate(&start);
+        cudaEventCreate(&stop);
+        cudaEventRecord(start);
+        return 0.0f;
+    }
+    float stopTimer(cudaEvent_t start, cudaEvent_t stop){
+        cudaEventRecord(stop);
+        cudaEventSynchronize(stop);
+        float milliseconds = 0.0f;
+        cudaEventElapsedTime(&milliseconds, start, stop);
+        cudaEventDestroy(start);
+        cudaEventDestroy(stop);
+        return milliseconds;
+    }
     static key_t *read_data(char *file_name, int data_len) {
         FILE *fid;
         fid = fopen(file_name, "rb");
@@ -61,49 +72,78 @@ public:
         delete[] check_pool_h;
     }
 
-    void batch_test() {
+    // void batch_test() {
+    //     DynamicCuckoo<512, 512> dy_cuckoo((uint32_t)batch_size * 10 / init_fill_factor, batch_size, lower_bound, upper_bound);
+    //     int32_t batch_num = pool_len / batch_size;
+    //     printf("pool_len:::::::::::::::: %d\n", pool_len);
+    //     int32_t batch_round = batch_num / 10;
+    //     cudaEvent_t start, stop;
+    //     // for (int repeat = 0; repeat < 10; repeat++) {
+    //         float insert_time =0, search_time = 0, delete_time = 0;
+    //         for (int32_t batch_round_ptr = 0; batch_round_ptr < batch_round; ++batch_round_ptr) {
+    //             int batch_ptr = batch_round_ptr * 10;
+    //             startTimer(start, stop);
+    //             for (int j = 0; j < 10; j++) {
+    //                 dy_cuckoo.batch_insert(keys_pool_d + (batch_ptr + j) * batch_size,
+    //                                      value_pool_d + (batch_ptr + j) * batch_size, batch_size);
+    //             }
+    //             insert_time += stopTimer(start, stop);
+    //             startTimer(start, stop);
+    //             for (int j = 0; j < 10; j++) {
+    //                 dy_cuckoo.batch_search(search_keys_pool_d + (batch_ptr + j) * batch_size,
+    //                                      check_pool_d + (batch_ptr + j) * batch_size, batch_size);
+    //             }
+    //             search_time += stopTimer(start, stop);
+    //             startTimer(start, stop);
+    //             for (int j = 0; j < 10; j++) {
+    //                 dy_cuckoo.batch_delete(delete_keys_pool_d + (batch_ptr + j) * batch_size, nullptr, batch_size);
+    //             }
+    //             delete_time += stopTimer(start, stop);
+                
+    //         }
+    //         double insert_throughput = (10 * batch_size) / ((insert_time / batch_round) * 1e-3);
+    //         double search_throughput = (10 * batch_size) / ((search_time / batch_round) * 1e-3);
+    //         double delete_throughput = (10 * batch_size) / (delete_time / batch_round * 1e-3);
+            
+    //         printf("Insert Time = %.3f ms | Throughput = %.2lf M ops/sec\n", 
+    //                insert_time / batch_round, insert_throughput / 1e6);
+    //         printf("Search Time = %.3f ms | Throughput = %.2lf M ops/sec\n", 
+    //             search_time / batch_round, search_throughput / 1e6);
+    //         printf("Delete Time = %.3f ms | Throughput = %.2lf M ops/sec\n", 
+    //             delete_time / batch_round, delete_throughput / 1e6);
+    //     // }
+
+    // }
+        void batch_test() {
         DynamicCuckoo<512, 512> dy_cuckoo((uint32_t)batch_size * 10 / init_fill_factor, batch_size, lower_bound, upper_bound);
         int32_t batch_num = pool_len / batch_size;
-        printf("pool_len:::::::::::::::: %d\n", pool_len);
+        printf("------------------------DyCuckoo------------------------\n");
+        printf("Total elements: %d\n", pool_len);
         int32_t batch_round = batch_num / 10;
-        HRTimer start, end;
-        // for (int repeat = 0; repeat < 10; repeat++) {
-            double insert_time =0, search_time = 0, delete_time = 0;
-            for (int32_t batch_round_ptr = 0; batch_round_ptr < batch_round; ++batch_round_ptr) {
-                int batch_ptr = batch_round_ptr * 10;
-                start = HR::now();
-                for (int j = 0; j < 10; j++) {
-                    dy_cuckoo.batch_insert(keys_pool_d + (batch_ptr + j) * batch_size,
-                                         value_pool_d + (batch_ptr + j) * batch_size, batch_size);
-                }
-                end = HR::now();
-                insert_time += duration_cast<milliseconds>(end - start).count();
-                start = HR::now();
-                for (int j = 0; j < 10; j++) {
-                    dy_cuckoo.batch_search(search_keys_pool_d + (batch_ptr + j) * batch_size,
-                                         check_pool_d + (batch_ptr + j) * batch_size, batch_size);
-                }
-                end = HR::now();
-                search_time += duration_cast<milliseconds>(end - start).count();
-                start = HR::now();
-                for (int j = 0; j < 10; j++) {
-                    dy_cuckoo.batch_delete(delete_keys_pool_d + (batch_ptr + j) * batch_size, nullptr, batch_size);
-                }
-                end = HR::now();
-                delete_time += duration_cast<microseconds>(end - start).count();
-                
-            }
-            double insert_throughput = (10 * batch_size) / ((insert_time / batch_round) * 1e-3);
-            double search_throughput = (10 * batch_size) / ((search_time / batch_round) * 1e-3);
-            double delete_throughput = (10 * batch_size) / (delete_time / batch_round * 1e-6);
-            
-            printf("Insert Time = %.3lf ms | Throughput = %.2lf M ops/sec\n", 
-                   insert_time / batch_round, insert_throughput / 1e6);
-            printf("Search Time = %.3lf ms | Throughput = %.2lf M ops/sec\n", 
-                search_time / batch_round, search_throughput / 1e6);
-            printf("Delete Time = %.3lf micro sec | Throughput = %.2lf M ops/sec\n", 
-                delete_time / batch_round, delete_throughput / 1e6);
-        // }
+        cudaEvent_t start, stop;
+        float insert_time =0, search_time = 0, delete_time = 0;
+        startTimer(start, stop);
+        dy_cuckoo.batch_insert(keys_pool_d, value_pool_d, pool_len);
+        cudaDeviceSynchronize();
+        insert_time = stopTimer(start, stop);
+        
+        startTimer(start, stop);
+        dy_cuckoo.batch_search(search_keys_pool_d, check_pool_d , pool_len);
+        cudaDeviceSynchronize();
+        search_time = stopTimer(start, stop);
+        
+        startTimer(start, stop);
+        dy_cuckoo.batch_delete(delete_keys_pool_d, nullptr, pool_len);
+        cudaDeviceSynchronize();
+        delete_time = stopTimer(start, stop);
+        
+        double insert_throughput = pool_len * 0.001/ (insert_time);
+        double search_throughput = pool_len * 0.001/ (search_time);
+        double delete_throughput = pool_len * 0.001 / (delete_time);
+        
+        printf("Insert Time = %.3f ms | Throughput = %.2lf M ops/sec\n", insert_time, insert_throughput );
+        printf("Search Time = %.3f ms | Throughput = %.2lf M ops/sec\n", search_time , search_throughput);
+        printf("Delete Time = %.3f ms | Throughput = %.2lf M ops/sec\n", delete_time , delete_throughput);
 
     }
 };
@@ -111,7 +151,6 @@ public:
 
 int main(int argc, char** argv) {
     using test_t = DynamicTest;
-
     if (argc < 10)
     {
         cout << "Usage: " << argv[0] << " insert_file search_file delete_file pool_len r batch_size lower_bound upper_bound init_fill_factor\n";
