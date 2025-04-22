@@ -1,40 +1,40 @@
 Running iteration 1...
 ------------------------DyCuckoo------------------------
 Total elements: 50000000
-Insert Time = 82.362 ms | Throughput = 607.07 M ops/sec
-Search Time = 22.936 ms | Throughput = 2180.02 M ops/sec
-Delete Time = 22.502 ms | Throughput = 2221.99 M ops/sec
+Insert Time = 83.823 ms | Throughput = 596.50 M ops/sec
+Search Time = 22.930 ms | Throughput = 2180.51 M ops/sec
+Delete Time = 22.512 ms | Throughput = 2221.08 M ops/sec
 Iteration 1 completed.
 -----------------------------
 Running iteration 2...
 ------------------------DyCuckoo------------------------
 Total elements: 50000000
-Insert Time = 82.321 ms | Throughput = 607.38 M ops/sec
-Search Time = 22.917 ms | Throughput = 2181.78 M ops/sec
-Delete Time = 22.513 ms | Throughput = 2220.98 M ops/sec
+Insert Time = 83.852 ms | Throughput = 596.29 M ops/sec
+Search Time = 22.950 ms | Throughput = 2178.65 M ops/sec
+Delete Time = 22.500 ms | Throughput = 2222.17 M ops/sec
 Iteration 2 completed.
 -----------------------------
 Running iteration 3...
 ------------------------DyCuckoo------------------------
 Total elements: 50000000
-Insert Time = 82.282 ms | Throughput = 607.66 M ops/sec
-Search Time = 22.921 ms | Throughput = 2181.39 M ops/sec
-Delete Time = 22.475 ms | Throughput = 2224.72 M ops/sec
+Insert Time = 83.901 ms | Throughput = 595.94 M ops/sec
+Search Time = 22.939 ms | Throughput = 2179.73 M ops/sec
+Delete Time = 22.649 ms | Throughput = 2207.62 M ops/sec
 Iteration 3 completed.
 -----------------------------
 Running iteration 4...
 ------------------------DyCuckoo------------------------
 Total elements: 50000000
-Insert Time = 82.442 ms | Throughput = 606.49 M ops/sec
-Search Time = 22.931 ms | Throughput = 2180.41 M ops/sec
-Delete Time = 22.583 ms | Throughput = 2214.03 M ops/sec
+Insert Time = 83.975 ms | Throughput = 595.41 M ops/sec
+Search Time = 22.964 ms | Throughput = 2177.30 M ops/sec
+Delete Time = 22.505 ms | Throughput = 2221.69 M ops/sec
 Iteration 4 completed.
 -----------------------------
 Running iteration 5...
 ------------------------DyCuckoo------------------------
 Total elements: 50000000
-Insert Time = 82.304 ms | Throughput = 607.51 M ops/sec
-Search Time = 22.914 ms | Throughput = 2182.07 M ops/sec
-Delete Time = 22.492 ms | Throughput = 2223.00 M ops/sec
+Insert Time = 83.907 ms | Throughput = 595.90 M ops/sec
+Search Time = 22.949 ms | Throughput = 2178.76 M ops/sec
+Delete Time = 22.518 ms | Throughput = 2220.45 M ops/sec
 Iteration 5 completed.
 -----------------------------
