@@ -1,29 +1,51 @@
-Initializing GPU Hash Table with 100000000 keys and 200000000 buckets
-CUDA error at ./././concurrent_map/cmap_class.cuh 233: out of memory
-Generating '/tmp/nsys-report-e9c7.qdstrm'
-[1/7] [0%                          ] report1.nsys-rep[1/7] [0%                          ] report1.nsys-rep[1/7] [==========49%               ] report1.nsys-rep[1/7] [=======================95%  ] report1.nsys-rep[1/7] [=======================96%  ] report1.nsys-rep[1/7] [========================97% ] report1.nsys-rep[1/7] [========================98% ] report1.nsys-rep[1/7] [========================100%] report1.nsys-rep[1/7] [========================100%] report1.nsys-rep
+------------------------DyCuckoo------------------------
+Total elements: 100000000
+Insert Time = 161.230 ms | Throughput = 620.23 M ops/sec
+Search Time = 49.836 ms | Throughput = 2006.60 M ops/sec
+Delete Time = 49.724 ms | Throughput = 2011.10 M ops/sec
+Generating '/tmp/nsys-report-9c61.qdstrm'
+[1/7] [0%                          ] report1.nsys-rep[1/7] [0%                          ] report1.nsys-rep[1/7] [14%                         ] report1.nsys-rep[1/7] [===========52%              ] report1.nsys-rep[1/7] [======================90%   ] report1.nsys-rep[1/7] [======================91%   ] report1.nsys-rep[1/7] [======================92%   ] report1.nsys-rep[1/7] [=======================93%  ] report1.nsys-rep[1/7] [=======================94%  ] report1.nsys-rep[1/7] [========================100%] report1.nsys-rep[1/7] [========================100%] report1.nsys-rep
 [2/7] [0%                          ] report1.sqlite[2/7] [1%                          ] report1.sqlite[2/7] [2%                          ] report1.sqlite[2/7] [3%                          ] report1.sqlite[2/7] [4%                          ] report1.sqlite[2/7] [5%                          ] report1.sqlite[2/7] [6%                          ] report1.sqlite[2/7] [7%                          ] report1.sqlite[2/7] [8%                          ] report1.sqlite[2/7] [9%                          ] report1.sqlite[2/7] [10%                         ] report1.sqlite[2/7] [11%                         ] report1.sqlite[2/7] [12%                         ] report1.sqlite[2/7] [13%                         ] report1.sqlite[2/7] [14%                         ] report1.sqlite[2/7] [=15%                        ] report1.sqlite[2/7] [=16%                        ] report1.sqlite[2/7] [=17%                        ] report1.sqlite[2/7] [==18%                       ] report1.sqlite[2/7] [==19%                       ] report1.sqlite[2/7] [==20%                       ] report1.sqlite[2/7] [==21%                       ] report1.sqlite[2/7] [===22%                      ] report1.sqlite[2/7] [===23%                      ] report1.sqlite[2/7] [===24%                      ] report1.sqlite[2/7] [====25%                     ] report1.sqlite[2/7] [====26%                     ] report1.sqlite[2/7] [====27%                     ] report1.sqlite[2/7] [====28%                     ] report1.sqlite[2/7] [=====29%                    ] report1.sqlite[2/7] [=====30%                    ] report1.sqlite[2/7] [=====31%                    ] report1.sqlite[2/7] [=====32%                    ] report1.sqlite[2/7] [======33%                   ] report1.sqlite[2/7] [======34%                   ] report1.sqlite[2/7] [======35%                   ] report1.sqlite[2/7] [=======36%                  ] report1.sqlite[2/7] [=======37%                  ] report1.sqlite[2/7] [=======38%                  ] report1.sqlite[2/7] [=======39%                  ] report1.sqlite[2/7] [========40%                 ] report1.sqlite[2/7] [========41%                 ] report1.sqlite[2/7] [========42%                 ] report1.sqlite[2/7] [=========43%                ] report1.sqlite[2/7] [=========44%                ] report1.sqlite[2/7] [=========45%                ] report1.sqlite[2/7] [=========46%                ] report1.sqlite[2/7] [==========47%               ] report1.sqlite[2/7] [==========48%               ] report1.sqlite[2/7] [==========49%               ] report1.sqlite[2/7] [===========50%              ] report1.sqlite[2/7] [===========51%              ] report1.sqlite[2/7] [===========52%              ] report1.sqlite[2/7] [===========53%              ] report1.sqlite[2/7] [============54%             ] report1.sqlite[2/7] [============55%             ] report1.sqlite[2/7] [============56%             ] report1.sqlite[2/7] [============57%             ] report1.sqlite[2/7] [=============58%            ] report1.sqlite[2/7] [=============59%            ] report1.sqlite[2/7] [=============60%            ] report1.sqlite[2/7] [==============61%           ] report1.sqlite[2/7] [==============62%           ] report1.sqlite[2/7] [==============63%           ] report1.sqlite[2/7] [==============64%           ] report1.sqlite[2/7] [===============65%          ] report1.sqlite[2/7] [===============66%          ] report1.sqlite[2/7] [===============67%          ] report1.sqlite[2/7] [================68%         ] report1.sqlite[2/7] [================69%         ] report1.sqlite[2/7] [================70%         ] report1.sqlite[2/7] [================71%         ] report1.sqlite[2/7] [=================72%        ] report1.sqlite[2/7] [=================73%        ] report1.sqlite[2/7] [=================74%        ] report1.sqlite[2/7] [==================75%       ] report1.sqlite[2/7] [==================76%       ] report1.sqlite[2/7] [==================77%       ] report1.sqlite[2/7] [==================78%       ] report1.sqlite[2/7] [===================79%      ] report1.sqlite[2/7] [===================80%      ] report1.sqlite[2/7] [===================81%      ] report1.sqlite[2/7] [===================82%      ] report1.sqlite[2/7] [====================83%     ] report1.sqlite[2/7] [====================84%     ] report1.sqlite[2/7] [====================85%     ] report1.sqlite[2/7] [=====================86%    ] report1.sqlite[2/7] [=====================87%    ] report1.sqlite[2/7] [=====================88%    ] report1.sqlite[2/7] [=====================89%    ] report1.sqlite[2/7] [======================90%   ] report1.sqlite[2/7] [======================91%   ] report1.sqlite[2/7] [======================92%   ] report1.sqlite[2/7] [=======================93%  ] report1.sqlite[2/7] [=======================94%  ] report1.sqlite[2/7] [=======================95%  ] report1.sqlite[2/7] [=======================96%  ] report1.sqlite[2/7] [========================97% ] report1.sqlite[2/7] [========================98% ] report1.sqlite[2/7] [========================99% ] report1.sqlite[2/7] [========================100%] report1.sqlite[2/7] [========================100%] report1.sqlite
 [3/7] Executing 'nvtxsum' stats report
 [4/7] Executing 'cudaapisum' stats report
 
- Time (%)  Total Time (ns)  Num Calls    Avg (ns)    Med (ns)   Min (ns)   Max (ns)    StdDev (ns)      Name   
- --------  ---------------  ---------  ------------  ---------  --------  -----------  ------------  ----------
-     99.8      203,990,131          7  29,141,447.3  139,886.0    98,981  202,440,638  76,418,347.2  cudaMalloc
-      0.2          387,985         64       6,062.3    4,959.0     4,671       58,531       6,728.1  cudaMemset
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)       Med (ns)     Min (ns)    Max (ns)     StdDev (ns)           Name         
+ --------  ---------------  ---------  -------------  ------------  ----------  -----------  -------------  ---------------------
+     59.6      662,034,322          4  165,508,580.5  98,541,175.5  91,680,944  373,271,027  138,633,348.8  cudaMemcpy           
+     22.5      249,769,209          3   83,256,403.0  49,794,510.0  49,671,884  150,302,815   58,063,928.4  cudaDeviceSynchronize
+     16.8      186,491,790          6   31,081,965.0     168,289.5     111,027  185,447,310   75,623,385.6  cudaMalloc           
+      0.8        9,289,523         41      226,573.7      32,590.0       7,007    1,192,141      360,394.9  cudaMemcpyToSymbol   
+      0.2        2,538,465          1    2,538,465.0   2,538,465.0   2,538,465    2,538,465            0.0  cudaFree             
+      0.1        1,075,308        264        4,073.1       4,370.0       2,304       42,380        2,752.4  cudaMemset           
+      0.0          306,289         43        7,123.0       5,385.0       5,038       33,173        5,889.2  cudaLaunchKernel     
+      0.0           54,449          6        9,074.8       8,449.0       2,172       16,340        6,346.0  cudaEventRecord      
+      0.0           27,054          6        4,509.0       2,278.5       1,009       16,482        5,995.4  cudaEventCreate      
+      0.0           11,797          3        3,932.3       3,715.0       3,570        4,512          507.2  cudaEventSynchronize 
+      0.0            8,536          6        1,422.7       1,454.0         614        2,283          763.7  cudaEventDestroy     
 
 [5/7] Executing 'gpukernsum' stats report
+
+ Time (%)  Total Time (ns)  Instances    Avg (ns)       Med (ns)      Min (ns)     Max (ns)    StdDev (ns)     GridXYZ         BlockXYZ                                                     Name                                                
+ --------  ---------------  ---------  -------------  -------------  -----------  -----------  -----------  --------------  --------------  ----------------------------------------------------------------------------------------------------
+     59.9      150,174,297          1  150,174,297.0  150,174,297.0  150,174,297  150,174,297          0.0   512    1    1   512    1    1  DynamicHash::cuckoo_insert(unsigned int *, DataLayout<unsigned int, (unsigned int)32, (unsigned int…
+     19.8       49,779,515          1   49,779,515.0   49,779,515.0   49,779,515   49,779,515          0.0   512    1    1   512    1    1  DynamicHash::cuckoo_search(unsigned int *, DataLayout<unsigned int, (unsigned int)32, (unsigned int…
+     19.8       49,661,018          1   49,661,018.0   49,661,018.0   49,661,018   49,661,018          0.0   512    1    1   512    1    1  DynamicHash::cuckoo_delete(unsigned int *, DataLayout<unsigned int, (unsigned int)32, (unsigned int…
+      0.5        1,173,739         40       29,343.5        9,632.0        2,623      130,914     39,580.2   512    1    1   512    1    1  DynamicHash::cuckoo_resize_up(DataLayout<unsigned int, (unsigned int)32, (unsigned int)128, (unsign…
+
 [6/7] Executing 'gpumemtimesum' stats report
 
- Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)    Operation  
- --------  ---------------  -----  --------  --------  --------  --------  -----------  -------------
-    100.0        1,711,183     55  31,112.4   2,912.0     2,591    61,216     29,234.4  [CUDA memset]
+ Time (%)  Total Time (ns)  Count    Avg (ns)    Med (ns)  Min (ns)   Max (ns)    StdDev (ns)       Operation     
+ --------  ---------------  -----  ------------  --------  --------  -----------  ------------  ------------------
+     98.7      661,146,893     45  14,692,153.2     864.0       832  373,068,642  59,777,405.4  [CUDA memcpy HtoD]
+      1.3        8,879,679    264      33,635.1   1,632.0       831      854,953     120,480.9  [CUDA memset]     
 
 [7/7] Executing 'gpumemsizesum' stats report
 
- Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)    Operation  
- ----------  -----  --------  --------  --------  --------  -----------  -------------
-    906.887     55    16.489     0.033     0.033    33.554       16.913  [CUDA memset]
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)   StdDev (MB)      Operation     
+ ----------  -----  --------  --------  --------  ---------  -----------  ------------------
+  4,902.582    264    18.570     0.004     0.000    484.442       68.641  [CUDA memset]     
+  2,800.009     45    62.222     0.000     0.000  1,600.000      255.208  [CUDA memcpy HtoD]
 
 Generated:
-    /users/mtech/bkeshav24/ACP/Concurrent-GPU-Hash-Table/Solutions/Nsight Outputs/report1.nsys-rep
-    /users/mtech/bkeshav24/ACP/Concurrent-GPU-Hash-Table/Solutions/Nsight Outputs/report1.sqlite
+    /users/mtech/bkeshav24/ACP/Concurrent-GPU-Hash-Table/DyCuckoo/NSight/report1.nsys-rep
+    /users/mtech/bkeshav24/ACP/Concurrent-GPU-Hash-Table/DyCuckoo/NSight/report1.sqlite
