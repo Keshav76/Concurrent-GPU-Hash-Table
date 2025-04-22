@@ -1,1 +1,0 @@
-ncu ./SlabHash/output --size=100000000 --ins=1 --lkp=0.3 --rem=0.1 --insert_path=insert_trace-400e7-100-add-no-dup.bin --search_path=search_trace-400e7-30-find-no-dup-no-absent.bin --delete_path=delete_trace-400e7-10-rem-no-dup-no-absent.bin > Slab_1e8.txt

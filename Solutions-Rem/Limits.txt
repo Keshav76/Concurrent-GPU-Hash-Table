@@ -1,4 +1,0 @@
-DyCuckoo 3e8
-Slabhash 1e8
-BGHT 8e8
-Warpcore ?? 
