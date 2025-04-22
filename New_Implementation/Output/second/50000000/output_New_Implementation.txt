@@ -1,0 +1,30 @@
+Starting execution 1
+------------------------DyCuckoo------------------------
+Total elements: 50000000
+Insert Time = 80.196 ms | Throughput = 623.48 M ops/sec
+Search Time = 24.312 ms | Throughput = 2056.61 M ops/sec
+Delete Time = 23.869 ms | Throughput = 2094.73 M ops/sec
+Starting execution 2
+------------------------DyCuckoo------------------------
+Total elements: 50000000
+Insert Time = 79.899 ms | Throughput = 625.79 M ops/sec
+Search Time = 24.505 ms | Throughput = 2040.43 M ops/sec
+Delete Time = 24.166 ms | Throughput = 2069.05 M ops/sec
+Starting execution 3
+------------------------DyCuckoo------------------------
+Total elements: 50000000
+Insert Time = 80.040 ms | Throughput = 624.69 M ops/sec
+Search Time = 24.497 ms | Throughput = 2041.05 M ops/sec
+Delete Time = 24.064 ms | Throughput = 2077.80 M ops/sec
+Starting execution 4
+------------------------DyCuckoo------------------------
+Total elements: 50000000
+Insert Time = 79.941 ms | Throughput = 625.46 M ops/sec
+Search Time = 24.488 ms | Throughput = 2041.82 M ops/sec
+Delete Time = 24.122 ms | Throughput = 2072.77 M ops/sec
+Starting execution 5
+------------------------DyCuckoo------------------------
+Total elements: 50000000
+Insert Time = 81.366 ms | Throughput = 614.51 M ops/sec
+Search Time = 24.494 ms | Throughput = 2041.31 M ops/sec
+Delete Time = 24.644 ms | Throughput = 2028.93 M ops/sec
