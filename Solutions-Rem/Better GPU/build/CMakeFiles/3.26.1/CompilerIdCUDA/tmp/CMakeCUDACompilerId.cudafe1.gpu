@@ -1,0 +1,23 @@
+typedef char __nv_bool;
+# 2939 "/usr/include/c++/10/type_traits" 3
+struct _ZSt10__nonesuch;
+# 50 "/usr/include/c++/10/bits/uses_allocator.h" 3
+struct _ZSt15allocator_arg_t;
+# 104 "/usr/include/c++/10/bits/std_function.h" 3
+enum _ZSt18_Manager_operation {
+# 106 "/usr/include/c++/10/bits/std_function.h" 3
+_ZSt15__get_type_info,
+# 107 "/usr/include/c++/10/bits/std_function.h" 3
+_ZSt17__get_functor_ptr,
+# 108 "/usr/include/c++/10/bits/std_function.h" 3
+_ZSt15__clone_functor,
+# 109 "/usr/include/c++/10/bits/std_function.h" 3
+_ZSt17__destroy_functor};
+# 209 "/usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h" 3
+typedef unsigned long size_t;
+#include "crt/device_runtime.h"
+# 264 "/usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h" 3
+typedef unsigned long _ZSt6size_t;
+# 50 "/usr/include/c++/10/bits/uses_allocator.h" 3
+struct _ZSt15allocator_arg_t {};
+#include "common_functions.h"

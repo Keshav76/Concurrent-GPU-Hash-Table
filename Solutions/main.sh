@@ -2,6 +2,11 @@
 
 # Configurations (mapped from label to numeric value)
 declare -A config_map=(
+    ["1e7"]="10000000"
+    ["5e7"]="50000000"
+    ["8e7"]="80000000"
+    ["1e8"]="100000000"
+    ["3e8"]="300000000"
     ["5e8"]="500000000"
     ["8e8"]="800000000"
 )

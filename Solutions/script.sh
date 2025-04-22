@@ -10,7 +10,7 @@ fi
 params="$@"
 
 # Loop through all directories in the current directory
-for dir in "Better GPU" "SlabHash" ; do
+for dir in "Better GPU" "SlabHash"; do
     dir=${dir%/}  # Remove trailing slash
 
     # echo "Processing directory: $dir"
