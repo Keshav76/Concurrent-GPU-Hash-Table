@@ -1,0 +1,4 @@
+/data/vinayakd24/DyCuckoo/build/CMakeFiles/dynamic_test.dir
+/data/vinayakd24/DyCuckoo/build/CMakeFiles/static_test.dir
+/data/vinayakd24/DyCuckoo/build/CMakeFiles/edit_cache.dir
+/data/vinayakd24/DyCuckoo/build/CMakeFiles/rebuild_cache.dir
